@@ -17,7 +17,7 @@ jobs:
       env:
         EC2_USER: ubuntu
         EC2_HOST: 13.202.234.217
-        KEY_PATH: "D:\\cloud Related Docs\\Key Pair\\skylena_projects.pem"
+        KEY_PATH: "D:/cloud Related Docs/Key Pair/skylena_projects.pem"
       run: |
         ssh -i ${{ env.KEY_PATH }} ${{ env.EC2_USER }}@${{ env.EC2_HOST }} 'sudo rm /var/www/html/index.nginx-debian.html'
         scp -i ${{ env.KEY_PATH }} index.html ${{ env.EC2_USER }}@${{ env.EC2_HOST }}:/var/www/html/index.html
