@@ -16,7 +16,7 @@ jobs:
     - name: Deploy to EC2
       env:
         EC2_USER: ubuntu
-        EC2_HOST: 13.202.234.217
+        EC2_HOST: 35.154.70.151
         KEY_PATH: "D:/CloudRelatedDocs/KeyPair/skylena_projects.pem"
       run: |
         ssh -i ${{ env.KEY_PATH }} ${{ env.EC2_USER }}@${{ env.EC2_HOST }} 'sudo rm /var/www/html/index.nginx-debian.html'
